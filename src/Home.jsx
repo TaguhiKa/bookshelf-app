@@ -1,6 +1,6 @@
 import { Show } from 'solid-js';
 
-function Home(props) {
+export default function Home(props) {
   return (
     <Show
       when={props.isLoggedin}

@@ -5,8 +5,8 @@ export default function Booklist(props) {
 
   return (
     <>
-      <h2>My books ({totalBooks()})</h2>
-      <ul>
+      <h2>Library ({totalBooks()})</h2>
+      <ul className='marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-500'>
         <For each={props.books}>
           {(book) => {
             return (

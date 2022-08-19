@@ -16,13 +16,18 @@ function Bookshelf(props) {
 
   const toggleForm = () => setShowForm(!showForm());
 
+  const toggleButton = () =>
+  <button onClick={toggleForm}>
+    Add a book
+  </button>
+
   return (
     <div>
-      <h1>{props.name}'s Bookshelf</h1>
+      <h1 className='text-3xl text-[#243c5a]  400 text-center py-6'>{props.name}'s Bookshelf</h1>
       <Booklist books={books()} />
       <Show
         when={showForm()}
-        fallback={<button onClick={toggleForm}>Add a book</button>}
+        fallback= {toggleButton}
       >
       <AddBook setBooks={setBooks} />
       <button onClick={toggleForm}>Done</button>
